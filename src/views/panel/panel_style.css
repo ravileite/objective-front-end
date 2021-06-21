@@ -1,0 +1,124 @@
+.panel-page {
+    margin: 0px;
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px 1fr;
+    grid-template-areas:
+        "header"
+        "panel-content";
+    justify-content: center;
+}
+
+.panel-content{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.search-title{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.search-subtitle{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-form i{
+    position: absolute;
+}
+
+.icon {
+    padding: 5px;
+    color: #333;
+    margin-left: -30px;
+}
+
+input{
+    border-width: 0px;
+    height: 20px;
+    font-style: italic;
+    padding: 5px;
+    width: 300px;
+}
+
+.columns{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows:  1fr;
+    grid-template-areas: 
+        "character-column series-column events-column";
+}
+
+.character-column{
+    margin-left: 20px;
+    grid-area: character-column;
+}
+
+.series-column{
+    grid-area: series-column;
+}
+
+.events-column{
+    grid-area: events-column;
+}
+
+p.column{
+    font-size: 12px;
+}
+
+@media(max-width: 768px){
+    .panel-content{
+        margin-left: 50px;
+        margin-right: 50px;
+        justify-content: center;
+        justify-items: center;
+    }
+
+   .search-title{
+        font-size: 24px;
+        text-align: center;
+   }
+
+   .search-subtitle{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .input-form{
+        text-align: center;
+    }
+
+    input{
+        justify-self: center;
+        margin-bottom: 30px;
+    }
+
+    .columns{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "character-column";
+    }
+
+    .character-column{
+        justify-self: center;
+        margin-left: 0px;
+    }
+    
+    .series-column{
+        width: 0;
+        visibility: hidden;
+    }
+    
+    .events-column{
+        width: 0;
+        visibility: hidden;
+    }
+}

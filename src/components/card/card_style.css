@@ -1,0 +1,91 @@
+.card{
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows:  1fr;
+    grid-template-areas: 
+        "card-thumbnail-and-name character-card-series character-card-events";
+    margin-top: 1%;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+}
+
+.card-thumbnail-and-name{
+    display: flex;
+    grid-area: card-thumbnail-and-name;
+    flex-direction: row;
+}
+
+.card-thumbnail{
+    padding: 20px;
+    height: 80px;
+    width: 80px;
+    border-radius: 25%;
+}
+
+.character-card-name{
+    align-self: center;
+    font-weight: bold;
+}
+
+.character-card-series{
+    grid-area: character-card-series;
+}
+
+.character-card-events{
+    grid-area: character-card-events;
+}
+
+p{
+    margin: 0;
+    color: #555;
+}
+
+@media(max-width: 768px){
+    .card{
+        display: grid;
+        height: 70px;
+        grid-template-columns: 1fr;
+        grid-template-rows:  1fr;
+        grid-template-areas: 
+            "card-thumbnail-and-name";
+        margin-bottom: 10px;
+    }
+
+    .card-thumbnail-and-name{
+        width: 100%;
+        grid-area: card-thumbnail-and-name;
+        flex-direction: row;
+    }
+
+    .character-card-name{
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .card-thumbnail{
+        padding: 10px;
+        height: 50px;
+        width: 50px;
+        border-radius: 20%;
+        margin-right: 20px;
+    }
+
+    .character-card-series{
+        width: 0px;
+        visibility: hidden;
+    }
+    
+    .character-card-events{
+        width: 0px;
+        visibility: hidden;
+    }
+}

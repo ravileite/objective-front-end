@@ -1,0 +1,50 @@
+header{
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(180deg, #000 0%, #FFF 400%);
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  1fr;
+    grid-template-areas: 
+        "header-image header-text";
+}
+
+.header-image{
+    display: flex;
+    justify-self: left;
+    margin-left: 10px;
+}
+
+.name-text{
+    color: #FFF;
+    margin-right: 10px;
+}
+
+.header-text{
+    display: flex;
+    justify-self: right;
+    margin-right: 20px;
+}
+
+img{
+    cursor: pointer;
+    height: 100px;
+}
+
+@media(max-width: 768px){
+    header{
+        width: 100%;
+    }
+
+    .header-text{
+        display: block;
+        text-align: center;
+    }
+
+    .name-text{
+        margin-right: 0px;
+    }
+    
+}
