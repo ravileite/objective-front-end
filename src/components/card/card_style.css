@@ -1,17 +1,19 @@
 .card{
+    background-color: #FFFFFF;
     display: block;
-    border-radius: 5px;
-    width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 4px;
+    width: 1140px;
+    height: 88px;
+    box-shadow: 0px 0px 5px #00000033;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
     grid-template-rows:  1fr;
     grid-template-areas: 
         "card-thumbnail-and-name character-card-series character-card-events";
-    margin-top: 1%;
     align-items: center;
     cursor: pointer;
     overflow: hidden;
+    margin-bottom: 8px;
 }
 
 .card:hover{
@@ -25,22 +27,30 @@
 }
 
 .card-thumbnail{
-    padding: 20px;
-    height: 80px;
-    width: 80px;
-    border-radius: 25%;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-left: 24px;
+    margin-bottom: 20px;
+    height: 48px;
+    width: 48px;
 }
 
 .character-card-name{
     align-self: center;
-    font-weight: bold;
+    font-family: 'PTSans-Bold';
+    font-size: 16px;
+    margin-left: 24px;
 }
 
 .character-card-series{
+    font-family: 'PTSans-Regular';
+    font-size: 14px;
     grid-area: character-card-series;
 }
 
 .character-card-events{
+    font-family: 'PTSans-Regular';
+    font-size: 14px;
     grid-area: character-card-events;
 }
 
@@ -49,15 +59,12 @@ p{
     color: #555;
 }
 
-@media(max-width: 768px){
+@media(max-width: 375px){
     .card{
-        display: grid;
-        height: 70px;
-        grid-template-columns: 1fr;
-        grid-template-rows:  1fr;
-        grid-template-areas: 
-            "card-thumbnail-and-name";
-        margin-bottom: 10px;
+        display: flex;
+        margin-left: 24px;
+        height: 72px;
+        width: 327px;
     }
 
     .card-thumbnail-and-name{
@@ -67,16 +74,16 @@ p{
     }
 
     .character-card-name{
-        width: 100%;
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .card-thumbnail{
-        padding: 10px;
-        height: 50px;
-        width: 50px;
-        border-radius: 20%;
-        margin-right: 20px;
+        border-radius: 4px;
+        margin-top: 12px;
+        margin-left: 16px;
+        margin-bottom: 12px;
+        height: 48px;
+        width: 48px;
     }
 
     .character-card-series{

@@ -12,11 +12,11 @@ export default function Pagination({ page, selectPageButton,
         <div className='pages'>
             <button className='arrow-button' disabled={!(page > 2)}
                 onClick={doubleLeft}>
-                <FaAngleDoubleLeft style={{ color: `${page > 2 ? COLORS.TEXT_COLOR : 'transparent'}` }} />
+                <FaAngleDoubleLeft style={{ color: `${page > 2 ? '#8E8E8E' : 'transparent'}`}} />
             </button>
             <button className='arrow-button' disabled={!(page > 1)}
                 onClick={singleLeft}>
-                <FaAngleLeft style={{ color: `${page > 1 ? COLORS.TEXT_COLOR : 'transparent'}` }} />
+                <FaAngleLeft style={{ color: `${page > 1 ? '#8E8E8E' : 'transparent'}`}} />
             </button>
             <PageButton page={pageArray[0]} changePage={selectPageButton} selected={pageArray[0] === page} />
             <PageButton changePage={selectPageButton} page={pageArray[1]} selected={pageArray[1] === page} />
@@ -25,11 +25,11 @@ export default function Pagination({ page, selectPageButton,
             <PageButton changePage={selectPageButton} page={pageArray[4]} selected={pageArray[4] === page} />
             <button className='arrow-button' disabled={!(page < 150)}
                 onClick={singleRight}>
-                <FaAngleRight style={{ color: `${page < 150 ? COLORS.TEXT_COLOR : 'transparent'}` }} />
+                <FaAngleRight style={{ color: `${page < 150 ? '#8E8E8E' : 'transparent'}`}} />
             </button>
             <button className='arrow-button' disabled={!(page < 149)}
                 onClick={doubleRight}>
-                <FaAngleDoubleRight style={{ color: `${page < 149 ? COLORS.TEXT_COLOR : 'transparent'}` }} />
+                <FaAngleDoubleRight style={{ color: `${page < 149 ? '#8E8E8E' : 'transparent'}`}} />
             </button>
         </div>
     )

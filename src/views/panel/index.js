@@ -105,8 +105,8 @@ export default function Panel() {
         <div className='panel-page'>
             <Header />
             <div className="panel-content">
-                <p style={{ color: COLORS.TEXT_COLOR }} className='search-title'>Busca de Personagens</p>
-                <p style={{ color: COLORS.TEXT_COLOR }} className='search-subtitle'>Nome do personagem</p>
+                <p className='search-title'>Busca de Personagens</p>
+                <p className='search-subtitle'>Nome do personagem</p>
 
                 <form onSubmit={e => handleSubmit(e)} >
                     <div className='input-form'>
@@ -119,29 +119,27 @@ export default function Panel() {
                         <i className="fa fa-search icon" />
                     </div>
                 </form>
-
-
                 {toRender &&
-                    <div style={{ marginTop: '30px' }}>
+                    <div>
                         <div className='columns'>
                             <p className='character-column column'>Personagem</p>
                             <p className='series-column column'>Séries</p>
                             <p className='events-column column'>Eventos</p>
                         </div>
-                        <div>
+
                             {characters.map(handleCards)}
-                        </div>
+ 
 
                     </div>
                 }
+            </div>
+            <div className='footer'>
                 {toRender && search === '' && characters.length > 1 &&
-                    <div style={{ textAlign: 'center' }}>
-                        <Pagination page={page} selectPageButton={selectPageButton} pageArray={pageArray}
-                            singleLeft={() => { setPage(page - 1); subtractPageArray() }}
-                            doubleLeft={() => { setPage(1); setPageArray([1, 2, 3, 4, 5]) }}
-                            singleRight={() => { setPage(page + 1); addPageArray() }}
-                            doubleRight={() => { setPage(150); setPageArray([146, 147, 148, 149, 150]) }} />
-                    </div>
+                    <Pagination page={page} selectPageButton={selectPageButton} pageArray={pageArray}
+                        singleLeft={() => { setPage(page - 1); subtractPageArray() }}
+                        doubleLeft={() => { setPage(1); setPageArray([1, 2, 3, 4, 5]) }}
+                        singleRight={() => { setPage(page + 1); addPageArray() }}
+                        doubleRight={() => { setPage(150); setPageArray([146, 147, 148, 149, 150]) }} />
                 }
             </div>
             {details && <Modal closeDetails={closeDetails} character={character} />}

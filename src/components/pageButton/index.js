@@ -4,14 +4,17 @@ import { COLORS } from '../../consts'
 
 export default function PageButton({ page, selected, changePage }) {
     return (
-        <button className='page-button'
+        <button 
             onClick={() => changePage(page)}
-            style={{color: `${selected ? '#FFF' : COLORS.TEXT_COLOR}`, 
-                    backgroundColor: `${selected ? '#007db8' : 'transparent'}`,
-                    borderWidth: '0px', borderRadius: '3px',
-                    fontSize: '14px', outline: 'none', cursor: 'pointer'
-            }}>
-        {page}
+            style={{width: `${window.screen.width <= 375 ? '32px' : '40px'}`,
+                height: '32px',
+                backgroundColor: `${!selected ? '#F5F5F5' : '#167ABC'}`,
+                border: '1px solid #E5E5E5',
+                color: '#555555',
+                borderRadius: '4px', outline: 'none', 
+                cursor: 'pointer', marginLeft: `${window.screen.width <= 375 ? '4px' : '8px'}`, 
+                marginRight: `${window.screen.width <= 375 ? '4px' : '8px'}`, fontFamily: 'PTSans-Regular'}}>
+            {page}
         </button>
     )
 }

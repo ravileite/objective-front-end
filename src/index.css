@@ -15,8 +15,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:#EEE;
-  
+  background-color:#E5E5E5;
 }
 
 code {
@@ -39,4 +38,32 @@ code {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #444; 
+}
+
+@font-face {
+    font-family: 'PTSansCaption-Bold';
+    src: local('PTSansCaption-Bold'),
+         url('./assets/fonts/PTSansCaption-Bold.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'PTSansCaption-Regular';
+    src: local('PTSansCaption-Regular'),
+         url('./assets/fonts/PTSansCaption-Regular.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'PTSans-Regular';
+    src: local('PTSans-Regular'),
+         url('./assets/fonts/PTSans-Regular.ttf') format('woff');
+}
+@font-face {
+    font-family: 'PTSans-Italic';
+    src: local('PTSans-Italic'),
+         url('./assets/fonts/PTSans-Italic.ttf') format('woff');
+}
+@font-face {
+    font-family: 'PTSans-Bold';
+    src: local('PTSans-Bold'),
+         url('./assets/fonts/PTSans-Bold.ttf') format('woff');
 }

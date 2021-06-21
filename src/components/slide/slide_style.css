@@ -6,20 +6,19 @@
 }
 
 .cover-image{
-    width: 50%;
+    width: 180px;
     height: 250px;
 }
 
-.slide-arrow{
-    display: flex;  
+.slide-arrow{ 
+    display: flex;
     margin: 20px;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     background-color: #FFF;
-    align-items: center;
-    justify-content: center;
     border-radius: 50%;
     font-size: 24px;
     cursor: pointer;
-    place-items: center;
+    align-items: center;
+    justify-content: center;
 }

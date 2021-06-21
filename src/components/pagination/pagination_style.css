@@ -1,21 +1,31 @@
 .pages{
     display: flex;
     flex-direction: row;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 26px;
+    margin-bottom: 32px;
     align-items: center;
     justify-content: center;
 }
 
-button.page-button{
-    width: 35px;
-    height: 30px;
-}
-
 .arrow-button{
+    background-color: #FFF;
     border-width: 0px;
-    font-size: 16px;
     margin-top: 5px;
     outline: none;
     cursor: pointer;
+    align-items: center;
+}
+
+.arrows{
+    width: 6px;
+    height: 10px;
+    
+}
+
+@media(max-width: 375px){
+    .pages{
+        margin-top: 22px;
+        margin-bottom: 25px;
+    }
+    
 }

@@ -56,50 +56,49 @@ export default function Modal({ character, closeDetails }) {
                 <div className='modal-card'>
                     <div className='row-1'>
                         <div className='details-character-thumbnail'>
-                            <h2 className='details-text'>{character.name}</h2>
+                            <p className='title-text'>{character.name}</p>
                             <img className='character-image' src={`${character.thumbnail.path}.${character.thumbnail.extension}`} />
                         </div>
                         <div className='character-comics' >
-                            <h2 className='details-text'>Quadrinhos</h2>
+                            <p className='title-text'>Quadrinhos</p>
                             <Slide itens={comics.data.data.results.filter(comic => !comic.thumbnail.path.includes('image_not_available'))} />
                         </div>
                         <div className='character-series' >
-                            <h2 className='details-text'>Series</h2>
+                            <p className='title-text'>Series</p>
                             <Slide itens={series.data.data.results.filter(serie => !serie.thumbnail.path.includes('image_not_available'))} />
                         </div>
                     </div>
                     <div className='row-2'>
                         <div className='card-stories'>
-                            <h2 className='details-text'>Todos as Histórias</h2>
+                            <p className='title-text'>Todos as Histórias</p>
                             <div className='items-list'>
                                 {character.stories.items.map(handleItems)}
                             </div>
-                        </div>  
+                        </div>
                         <div className='card-comics'>
-                            <h2 className='details-text'>Todos os Quadrinhos</h2>
+                            <p className='title-text'>Todos os Quadrinhos</p>
                             <div className='items-list'>
                                 {character.comics.items.map(handleItems)}
                             </div>
-                        </div>  
+                        </div>
                         <div className='card-events'>
-                            <h2 className='details-text'>Todos os Eventos</h2>
+                            <p className='title-text'>Todos os Eventos</p>
                             <div className='items-list'>
                                 {character.events.items.map(handleItems)}
                             </div>
-                        </div>  
+                        </div>
                         <div className='card-series'>
-                            <h2 className='details-text'>Todos as Séries</h2>
+                            <p className='title-text'>Todos as Séries</p>
                             <div className='items-list'>
                                 {character.series.items.map(handleItems)}
                             </div>
-                        </div>  
+                        </div>
                     </div>
                     {character.urls[1].type === 'wiki' &&
-                        <div className='character-bio'>
-                            <h2>Clique <a style={{color: 'red'}} href={character.urls[1].url} target='_blank' >
-                                    aqui
-                                </a> e conheça mais sobre o personagem.</h2>
-                        </div>
+                        <p className='character-bio'>Clique <a style={{ color: 'red' }} href={character.urls[1].url} target='_blank' >
+                            aqui
+                            </a> e conheça mais sobre o personagem.
+                        </p>
                     }
                 </div>
             }
